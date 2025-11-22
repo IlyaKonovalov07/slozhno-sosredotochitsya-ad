@@ -7,7 +7,7 @@
   --backgroung-image: url(../images/cover-image-dark.png);
 }
 
-.theme_dark .decorative__element {
+.theme_dark .decor_element {
   display: flex;
 }
 

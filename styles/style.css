@@ -6,22 +6,23 @@
   line-height: 23.4px;
   background-image: var(--backgroung-image);
   background-position: center;
+    /* растяг фон на весь экран */
   background-size: cover;
+  /* закрепляет фон при прокруте*/
   background-attachment: fixed;
 }
 
-/*Шапка*/
 
 .header {
-  min-block-size: 100vh;
+  /* min-block-size: 100vh; ! */
+  min-height: 100vh;
   padding: 20px;
   display: grid;
   position: relative;
   grid-template-rows: 1fr min-content 1fr;
 }
 
-/*Кнопки навигации*/
-
+/* Кнопки */
 .header__theme-menu-list {
   display: flex;
   justify-content: center;
@@ -29,21 +30,21 @@
 }
 
 .header__theme-menu-button {
+  background: transparent;
   padding: 0 13px;
   color: var(--btn-color);
   text-align: center;
   border: none;
-  background: transparent;
 }
 
-/*Действия на кнопки*/
-
 .header__theme-menu-button_active {
+  /* кнопка неактивна */
   pointer-events: none;
   border: 1px solid var(--btn-color);
 }
 
 .header__theme-menu-button:focus {
+  /* убирает обводку браузера */
   outline: none;
 }
 
@@ -56,45 +57,44 @@
   cursor: pointer;
 }
 
-/*РЕС*/
-
-.decorative__element {
-  position: absolute;
-  top: 0;
-  right: 0;
+/* REC */
+.decor_element {
   content: "";
+  position: absolute;
   display: flex;
   align-items: center;
+  top: 0;
+  right: 0;
   gap: 10px;
   color: var(--btn-color);
   text-align: center;
   padding-right: 8px;
-  text-transform: uppercase;
   margin: 20px;
 }
 
-.decorative__element::after {
+.decor_element::after {
   display: block;
   content: "";
-  inline-size: 9px;
-  block-size: 9px;
+  width: 9px;
+  height: 9px;
   border-radius: 50%;
   background-color: var(--accent-color);
-  fill: var(--accent-color);
-  filter: drop-shadow(0px 0px 4px var(--accent-color));
+  /* fill: var(--accent-color); !*/
+  /* filter: drop-shadow(0px 0px 4px var(--accent-color)); !*/
+  box-shadow: 0 0 4px var(--accent-color);
 }
 
-/* Стили углов*/
+/* уголки */
 
 .frame::before {
+  content: "";
   position: absolute;
   top: 0;
   right: 0;
-  content: "";
   border-top: 1px solid var(--btn-color);
   border-right: 1px solid var(--btn-color);
-  inline-size: 25px;
-  block-size: 25px;
+  width: 25px;
+  height: 25px;
   margin: 20px;
 }
 
@@ -105,8 +105,8 @@
   content: "";
   border-bottom: 1px solid var(--btn-color);
   border-left: 1px solid var(--btn-color);
-  inline-size: 25px;
-  block-size: 25px;
+  width: 25px;
+  height: 25px;
   margin: 20px;
 }
 
@@ -130,8 +130,11 @@
 }
 
 .header__text {
-  max-inline-size: 491px;
-  max-block-size: 71px;
+  /* max-inline-size: 491px;
+  max-block-size: 71px; !*/
+  max-width: 491px;
+  max-height: 71px;
+  /* по прав краю */
   justify-self: end;
   align-self: center;
 }

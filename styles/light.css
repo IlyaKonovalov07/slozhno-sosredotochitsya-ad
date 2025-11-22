@@ -24,7 +24,7 @@
     --btn-color:#353430;
     --backgroung-image: url(../images/cover-image-light.png);
   }
-  .decorative__element {
+  .decor_element {
     display: none;
   }
   
