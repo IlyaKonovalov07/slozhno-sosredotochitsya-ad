@@ -14,7 +14,6 @@
 
 
 .header {
-  /* min-block-size: 100vh; ! */
   min-height: 100vh;
   padding: 20px;
   display: grid;
@@ -79,8 +78,6 @@
   height: 9px;
   border-radius: 50%;
   background-color: var(--accent-color);
-  /* fill: var(--accent-color); !*/
-  /* filter: drop-shadow(0px 0px 4px var(--accent-color)); !*/
   box-shadow: 0 0 4px var(--accent-color);
 }
 
@@ -130,8 +127,6 @@
 }
 
 .header__text {
-  /* max-inline-size: 491px;
-  max-block-size: 71px; !*/
   max-width: 491px;
   max-height: 71px;
   /* по прав краю */
@@ -139,105 +134,107 @@
   align-self: center;
 }
 
-/*Дизайн заголовков всех секций*/
+/*секции*/
 
-.question__section-title {
+.question_title {
   color: var(--btn-color);
   font-weight: 700;
-  line-height: 23.4px; /* 130% */
+  line-height: 23.4px;
   font-size: var(--font-size);
 }
 
-/*Дизайн текста всех секций*/
 
-.question__section-answer-text {
+.question_answer {
   font-size: var(--font-size);
   color: var(--text-color);
 }
 
-/*Ссылки*/
+/*слова с ссылками*/
 
-.question__section-answer-link {
+.question_link {
   text-decoration: none;
   text-shadow: 2px 2px 0 var(--accent-color);
 }
 
-.question__section-answer-link:hover {
+.question_link:hover {
   border-bottom: 1px solid var(--text-color);
 }
 
-.question__section-answer-link:focus {
+.question_link:focus {
+  /* убирает обводку браузера */
   outline: none;
 }
 
-.question__section-answer-link:focus-visible {
+.question_link:focus-visible {
   border: 1px solid var(--text-color);
 }
 
-/*Первая секция с вопросами*/
+/*первая секия с вопросами*/
 
-.question__section__one {
+.question_section_one {
   display: grid;
   grid-template-columns: 34% 66%;
-  padding-block-start: 60px;
+  /* padding-block-start: 60px; !*/
+  padding-top: 60px;
   margin: 0 20px;
 }
 
-.question__section-answer {
+.question_section-answer {
   display: flex;
+  /* вертикальное расположение элементов */
   flex-direction: column;
   gap: 10px;
 }
 
-.question__section-answer p:first-of-type {
-  padding-block-end: 10px;
+.question_section-answer p:first-of-type {
+  padding-bottom: 10px;
 }
 
-/*Вторая секция с вопросами*/
+/*вторая секция с вопрсами*/
 
 .question__section-two {
-  padding-block-start: 80px;
-  padding-block-end: 80px;
+  padding-top: 80px;
+  padding-bottom: 80px;
   margin: 0 20px;
 }
 
-.question__section-answer-two-container {
+.question_section-answer-two-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  padding-top: 20px;
   gap: 20px;
-  padding-block-start: 20px;
 }
-.question__section-title-two {
-  max-inline-size: 315px;
-}
-
-.question__section-answer-title-two {
-  margin-block-end: 10px;
+.question_section-title-two {
+  max-width: 315px;
 }
 
-/*Третья секция с вопросами*/
+.question_section-answer-title-two {
+  margin-bottom: 10px;
+}
 
-.question__section__fhree {
+/*третья секция с вопросми*/
+
+.question_section_three {
   display: grid;
   grid-template-columns: 34% 66%;
-  padding-block-end: 80px;
+  padding-bottom: 80px;
   margin: 0 20px;
 }
 
-.question__section-answer-subtitle {
+.question_section-answer-subtitle {
   font-weight: 400;
 }
 
-.question__section-answer-fhree {
+.question_section-answer-three {
   display: grid;
   gap: 20px;
 }
 
-.question__section-answer-text-fhree {
-  padding-block-start: 10px;
+.question_section-answer-text-three {
+  padding-top: 10px;
 }
 
-/*Секция с картинками*/
+/*картинки*/
 
 .question__section__image {
   padding-block-end: 60px;
@@ -327,25 +324,25 @@
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem) ;
   }
 
-  .question__section__one {
+  .question_section_one {
 
     grid-template-columns: 33% 67%;
     gap: 20px;
     padding-inline-end:20px;
   }
 
-  .question__section-answer-two-container {
+  .question_section-answer-two-container {
     display: flex;
     flex-direction: column;
     gap: 20px;
     padding-block-start: 20px;
   }
 
-  .question__section-title-two {
+  .question_section-title-two {
     max-inline-size: 236px;
   }
   
-  .question__section__fhree {
+  .question_section_three {
     display: grid;
     grid-template-columns: 35% 65%;
     padding-block-end: 80px;
@@ -375,7 +372,7 @@
   max-block-size: 117px;
 }  
 
-.question__section__one {
+.question_section_one {
   margin: 0px 10px;
   padding: 40px 0 0 0;
   display: flex;
@@ -390,16 +387,16 @@
   padding-block-end: 50px;
 }
 
-.question__section-title-two {
+.question_section-title-two {
   min-inline-size: 355px;
 }
 
-.question__section-answer-two-container {
+.question_section-answer-two-container {
   display: flex;
   flex-direction: column;
 }
 
-.question__section__fhree {
+.question_section_three {
   margin: 0 10px;
   display: flex;
   flex-direction: column;
